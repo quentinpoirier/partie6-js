@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2 part6 js</title>
+</head>
+
+<body>
+    <h1>exerice 2</h1>
+    <p>A l'aide d'une boucle afficher tous les nombre de 0 à 100. Pour chaque multiples de 15, les remplacer par '...'</p>
+    <button type="button" id="myButton">generate</button>
+    <p id="myNumbers"></p>
+
+    <script>
+        myButton.addEventListener('click', function () {
+            for (i = 0; i <= 100; i++) {
+                let myDiv = document.createElement('div');
+                if (i % 15 == 0) {
+                    myDiv.innerText = '...';
+                } else {
+                    myDiv.innerText = i;
+                }
+                myNumbers.appendChild(myDiv);
+            }
+        })
+       
+    </script>
+
+</body>
+
+</html>

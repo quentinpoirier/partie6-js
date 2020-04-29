@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1 part6 js</title>
+</head>
+
+<body>
+    <h1>exerice 1</h1>
+    <p>A l'aide d'une boucle, afficher toutes les années entre 2020 et 2030. Colorer en rouge toutes les années bissextiles.</p>
+    <button type="button" id="myButton">generate</button>
+    <p id="myYears"></p>
+
+    <script>
+        myButton.addEventListener('click', function () {
+            for (i = 2020; i <= 2030; i++) {
+                let myDiv = document.createElement('div');
+                myDiv.innerText = i;
+                myYears.appendChild(myDiv);
+                if ((i % 4 == 0) && ((i % 100 != 0) || (i % 400 == 0))) {
+                    myDiv.style.color = 'red';
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
