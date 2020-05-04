@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice6</title>
+</head>
+
+<body>
+    <h1>Exercice 6</h1>
+    <ul>Créer deux variables firstNumber et secondNumber. Leur donner une valeur comprise entre 1 et 10. Tant que le
+        résultat de la division des deux nombres est supérieur à 1:
+        <li>Afficher le résultat.</li>
+        <li>Assigner le résultat à firstNumber</li>
+    </ul>
+    <button type="button" id="myButton">generate</button>
+    <p id="myNumber"></p>
+
+    <script>
+        let firstNumber = 1;
+        let secondNumber = 2;
+        myButton.addEventListener('click', function () {
+            if (firstNumber < secondNumber) {
+                alert('veillez entrer un firstNumber supérieur à secondNumber');
+            }
+            while (firstNumber / secondNumber > 1) {
+                firstNumber = firstNumber / secondNumber;
+                let myP = document.createElement('p');
+                myP.innerText = firstNumber;
+                myNumber.appendChild(myP);
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
